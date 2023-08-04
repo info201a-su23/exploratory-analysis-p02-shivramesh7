@@ -57,7 +57,7 @@ The project's broader challenges involve potential data issues like missing valu
 
 Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
 
-The summary information reveals key statistics calculated from the dataset: minimum and maximum life expectancy, mean, median, and standard deviation of life expectancy. These values provide an overview of life expectancy distribution, offering insights into patterns and variability, but they should be interpreted with consideration for the dataset's limitations.
+The summary information reveals key statistics calculated from the dataset: minimum and maximum life expectancy, mean life expectancy by alcohol consumption amount, median, and ***. These values provide an overview of life expectancy distribution, offering insights into patterns and variability, but they should be interpreted with consideration for the dataset's limitations.
 
 ### Table
 
@@ -73,8 +73,8 @@ Describe why you chose this chart and what information it reveals
 
 Here's an example of how to run an R script inside an RMarkdown file:
 
-``````{r, echo = FALSE, code = readLines("chart1_example.R")}
-```
+#``````{r, echo = FALSE, code = readLines("chart1_example.R")}
+#```
 
 ### Chart 2
 
@@ -86,10 +86,9 @@ Describe why you chose this chart and what information it reveals
 
 Include a chart
 
-``````{r, echo = FALSE}, code = readLines("chart3.R")
-      eval(parse(text = code))
+``````{r, echo = FALSE, code = readLines("chart3.R")}
 ```
 
 Describe why you chose this chart and what information it reveals
 
-
+I chose this line chart to visualize the relationship between alcohol consumption and life expectancy as it helps reveal trends or patterns between these variables, showing how life expectancy changes with varying alcohol consumption levels.
