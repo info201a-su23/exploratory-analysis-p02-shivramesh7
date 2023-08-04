@@ -50,9 +50,14 @@ Assuming you answer your research questions, briefly describe the expected or po
 ### Limitations & Challenges
 What challenges or limitations might you need to address with your project idea more broadly? Briefly discuss. (at least 150 words)
 
+The project's broader challenges involve potential data issues like missing values and outliers, which might impact analysis accuracy. The dataset's scope and coverage limitations, focusing on specific regions and omitting confounding variables like socioeconomic status, could affect generalizability. Establishing causation between alcohol consumption and life expectancy requires more rigorous study designs, and cultural variations may introduce biases. To address these challenges, thorough data cleaning, robust statistical methods, and diverse datasets are essential. Caution must be exercised in making causal claims without supporting evidence, acknowledging uncertainties in findings.
+
+
 ### Summary Information
 
 Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
+
+The summary information reveals key statistics calculated from the dataset: minimum and maximum life expectancy, mean, median, and standard deviation of life expectancy. These values provide an overview of life expectancy distribution, offering insights into patterns and variability, but they should be interpreted with consideration for the dataset's limitations.
 
 ### Table
 
@@ -81,4 +86,9 @@ Describe why you chose this chart and what information it reveals
 
 Include a chart
 
+``````{r, echo = FALSE, code = readLines("chart3.R")}
+```
+
 Describe why you chose this chart and what information it reveals
+
+I chose this line chart to visualize the relationship between alcohol consumption and life expectancy as it helps reveal trends or patterns between these variables, showing how life expectancy changes with varying alcohol consumption levels.
