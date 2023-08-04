@@ -73,7 +73,7 @@ Describe why you chose this chart and what information it reveals
 
 Here's an example of how to run an R script inside an RMarkdown file:
 
-``````{r, echo = FALSE}, code = readLines("chart1_example.R"), eval(parse(text = code))
+``````{r, echo = FALSE, code = readLines("chart1_example.R")}
 ```
 
 ### Chart 2
@@ -86,9 +86,10 @@ Describe why you chose this chart and what information it reveals
 
 Include a chart
 
-``````{r, echo = FALSE, code = readLines("chart3.R")}
+``````{r, echo = FALSE}, code = readLines("chart3.R")
+      eval(parse(text = code))
 ```
 
 Describe why you chose this chart and what information it reveals
 
-I chose this line chart to visualize the relationship between alcohol consumption and life expectancy as it helps reveal trends or patterns between these variables, showing how life expectancy changes with varying alcohol consumption levels.
+
