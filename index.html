@@ -394,20 +394,75 @@ citation style of your choice. (at least 200 words)</p>
 </div>
 <div id="the-dataset" class="section level3">
 <h3>The Dataset</h3>
+<blockquote>
 <p>Where did you find the data? Please include a link to the data
-source<br />
-Who collected the data?<br />
-How was the data collected or generated?<br />
-Why was the data collected?<br />
-How many observations (rows) are in your data?<br />
-How many features (columns) are in the data?<br />
-What, if any, ethical questions or questions of power do you need to
-consider when working with this data?<br />
-What are possible limitations or problems with this data? (at least 200
-words)</p>
-</div>
-<div id="implications" class="section level3">
-<h3>Implications</h3>
+source</p>
+</blockquote>
+<p>Our group finds the data from the Kaggle website through the
+following link <a href="https://www.kaggle.com/datasets/lashagoch/life-expectancy-who-updated" class="uri">https://www.kaggle.com/datasets/lashagoch/life-expectancy-who-updated</a>.</p>
+<blockquote>
+<p>Who collected the data?</p>
+</blockquote>
+<p>The data was initially collected by World Health Organization (WHO)
+with the help of Deeksha Russell and Duan Wang and finally revised by
+Lasha Gochiashivili.</p>
+<blockquote>
+<p>How was the data collected or generated?</p>
+</blockquote>
+<p>The data was collected from the Global Health Observatory(GHO) data
+repository, which focuses on the health status under the impact of many
+other factors across all countries.</p>
+<blockquote>
+<p>Why was the data collected?</p>
+</blockquote>
+<p>The main purpose of the data collection was to understand how life
+expectancy was affected by immunization, mortality, economic; and social
+factors from 2000 to 2015 across 197 countries. As the observations
+varied in different countries, it gave a more intuitive way for the
+country to determine the predicting factor that was mainly caused by the
+lower value of life expectancy. Therefore, there would be enough space
+and explicit direction for the country to make the improvement to
+prolong the life expectancy of the overall population.</p>
+<blockquote>
+<p>How many observations (rows) are in your data?</p>
+</blockquote>
+<pre class="r"><code>n_observation &lt;- nrow(life_expectancy_data_url)
+n_observation</code></pre>
+<pre><code>## [1] 2864</code></pre>
+<p>There are 2864 observations in the data.</p>
+<blockquote>
+<p>How many features (columns) are in the data?</p>
+</blockquote>
+<blockquote>
+<p>What, if any, ethical questions or questions of power do you need to
+consider when working with this data?</p>
+</blockquote>
+<p>There are no apparent ethical dilemmas about working with this data,
+but it is possible that the results could pose ethical dilemmas about
+quality of life across different countries. And, we would ensure the
+transparency, fairness, and accountability during the data analysis.</p>
+<blockquote>
+<p>What are possible limitations or problems with this data? (at least
+200 words)</p>
+</blockquote>
+<p>One potential problem is that data quality and consistency may vary
+across different countries and regions. Discrepancies in data collection
+methods, reporting standards, and healthcare infrastructure can lead to
+inaccuracies and hinder comparative analysis. Another problem is the
+missing data and gaps in the time series. Some countries might not have
+consistently reported life expectancy data over the years, making it
+difficult to obtain a comprehensive and continuous dataset. Inputting
+missing values may introduce biases and uncertainties into the analysis.
+Moreover, disparities in healthcare infrastructure and access to
+healthcare services can affect the accuracy and completeness of life
+expectancy data. Regions with better healthcare systems might have more
+accurate and up-to-date information, while regions with weaker systems
+may face challenges in data collection and reporting. This disparity can
+introduce biases, favoring regions with more developed healthcare
+systems in comparative analyses.</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Implications ### Implications</li>
+</ol>
 <p>Assuming you answer your research questions, briefly describe the
 expected or possible implications for technologists, designers, and
 policymakers. (at least 150 words)</p>
@@ -433,11 +488,11 @@ in findings.</p>
 <p>Write a summary paragraph of findings that includes the 5 values
 calculated from your summary information R script</p>
 <p>The summary information reveals key statistics calculated from the
-dataset: minimum and maximum life expectancy, mean, median, and standard
-deviation of life expectancy. These values provide an overview of life
-expectancy distribution, offering insights into patterns and
-variability, but they should be interpreted with consideration for the
-dataset’s limitations.</p>
+dataset: minimum and maximum life expectancy, mean life expectancy by
+alcohol consumption amount, median, and ***. These values provide an
+overview of life expectancy distribution, offering insights into
+patterns and variability, but they should be interpreted with
+consideration for the dataset’s limitations.</p>
 </div>
 <div id="table" class="section level3">
 <h3>Table</h3>
@@ -451,7 +506,7 @@ reveals</p>
 <p>Describe why you chose this chart and what information it reveals</p>
 <p>Here’s an example of how to run an R script inside an RMarkdown
 file:</p>
-<p>#<code>{r, echo = FALSE, code = readLines(&quot;chart1_example.R&quot;)} #</code></p>
+<p>#```<code>{r, echo = FALSE, code = readLines(&quot;chart1_example.R&quot;)} #</code></p>
 </div>
 <div id="chart-2" class="section level3">
 <h3>Chart 2</h3>
@@ -461,8 +516,11 @@ file:</p>
 <div id="chart-3" class="section level3">
 <h3>Chart 3</h3>
 <p>Include a chart</p>
-<p><code>{r, echo = FALSE}, code = readLines(&quot;chart3.R&quot;)       eval(parse(text = code))</code></p>
 <p>Describe why you chose this chart and what information it reveals</p>
+<p>I chose this line chart to visualize the relationship between alcohol
+consumption and life expectancy as it helps reveal trends or patterns
+between these variables, showing how life expectancy changes with
+varying alcohol consumption levels.</p>
 </div>
 </div>
 

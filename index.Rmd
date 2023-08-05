@@ -3,6 +3,17 @@ title: "Exploratory Analysis"
 output: html_document
 ---
 
+```{r setup, include=FALSE}
+library(dplyr)
+library(ggplot2)
+library(scales)
+library(maps)
+
+life_expectancy_data_url <- read.csv("/Users/nancyliu/Documents/exploratory-analysis-p02-shivramesh7/Life-Expectancy-Data-Updated.csv")
+View(life_expectancy_data_url)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
 ## Project title
 
 Give your project a concise, interesting title that summarizes the entirety of your project
@@ -34,15 +45,49 @@ Describe your topic and related work in this space. You must include 3 citations
 
 ### The Dataset
 
-Where did you find the data? Please include a link to the data source  
-Who collected the data?  
-How was the data collected or generated?  
-Why was the data collected?  
-How many observations (rows) are in your data?  
-How many features (columns) are in the data?  
-What, if any, ethical questions or questions of power do you need to consider when working with this data?  
-What are possible limitations or problems with this data?   (at least 200 words)
+> Where did you find the data? Please include a link to the data source
 
+Our group finds the data from the Kaggle website through the following link https://www.kaggle.com/datasets/lashagoch/life-expectancy-who-updated.
+
+> Who collected the data?
+
+The data was initially collected by World Health Organization (WHO) with the help of Deeksha Russell and Duan Wang and finally revised by Lasha Gochiashivili.
+
+> How was the data collected or generated? 
+
+The data was collected from the Global Health Observatory(GHO) data repository, which focuses on the health status under the impact of many other factors across all countries.
+
+> Why was the data collected?
+
+The main purpose of the data collection was to understand how life expectancy was affected by immunization, mortality, economic; and social factors from 2000 to 2015 across 197 countries. As the observations varied in different countries, it gave a more intuitive way for the country to determine the predicting factor that was mainly caused by the lower value of life expectancy. Therefore, there would be enough space and explicit direction for the country to make the improvement to prolong the life expectancy of the overall population.
+
+> How many observations (rows) are in your data?  
+
+```{r number_observations}
+n_observation <- nrow(life_expectancy_data_url)
+n_observation
+```
+
+There are 2864 observations in the data. 
+
+> How many features (columns) are in the data?
+
+```{r number_featuress}
+n_features <- ncol(life_expectancy_data_url)
+n_features
+```
+
+There are 21 features in the data.
+
+> What, if any, ethical questions or questions of power do you need to consider when working with this data?  
+
+There are no apparent ethical dilemmas about working with this data, but it is possible that the results could pose ethical dilemmas about quality of life across different countries. And, we would ensure the transparency, fairness, and accountability during the data analysis.
+
+> What are possible limitations or problems with this data?   (at least 200 words)
+
+One potential problem is that data quality and consistency may vary across different countries and regions. Discrepancies in data collection methods, reporting standards, and healthcare infrastructure can lead to inaccuracies and hinder comparative analysis. Another problem is the missing data and gaps in the time series. Some countries might not have consistently reported life expectancy data over the years, making it difficult to obtain a comprehensive and continuous dataset. Inputting missing values may introduce biases and uncertainties into the analysis. Moreover, disparities in healthcare infrastructure and access to healthcare services can affect the accuracy and completeness of life expectancy data. Regions with better healthcare systems might have more accurate and up-to-date information, while regions with weaker systems may face challenges in data collection and reporting. This disparity can introduce biases, favoring regions with more developed healthcare systems in comparative analyses.
+
+4. Implications
 ### Implications
 
 Assuming you answer your research questions, briefly describe the expected or possible implications for technologists, designers, and policymakers. (at least 150 words)
@@ -77,6 +122,9 @@ Here's an example of how to run an R script inside an RMarkdown file:
 #```
 
 ### Chart 2
+``````{r, echo = FALSE, code = readLines("chart1_example.R")}
+source(second_chart_BMI.R)
+```
 
 Include a chart
 
