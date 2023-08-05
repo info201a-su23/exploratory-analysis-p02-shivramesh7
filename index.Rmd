@@ -11,6 +11,9 @@ library(maps)
 
 life_expectancy_data_url <- read.csv("/Users/nancyliu/Documents/exploratory-analysis-p02-shivramesh7/Life-Expectancy-Data-Updated.csv")
 View(life_expectancy_data_url)
+
+source('second_chart_BMI.R')
+
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
@@ -20,7 +23,7 @@ Give your project a concise, interesting title that summarizes the entirety of y
 
 ### Authors
 
-Names of your team members
+
 
 ### Date
 
@@ -92,6 +95,8 @@ One potential problem is that data quality and consistency may vary across diffe
 
 Assuming you answer your research questions, briefly describe the expected or possible implications for technologists, designers, and policymakers. (at least 150 words)
 
+Since we are looking at the life expectancy rates across many different countries, we should be able to address many similarities and defining factors that increase or decrease the life expectancy in each country. Since there are many different years for each country with information on each statistic, we are also able to look for a trend in life expectancy and compare it to other trends of other statistics in each country and overall. If we are able to answer our research questions by analyzing the data in the sets, we will be able to identify certain factors that go into increasing and decreasing life expectancy, and target the main contributing factors in each country. Policymakers from every country will be able to target what needs to be changed within that specific country in order to ensure the highest life expectancy. This is mainly something that affects policymakers within each country because they are the ones who are able to allocate funds and support to certain sanctions with their country.
+
 ### Limitations & Challenges
 What challenges or limitations might you need to address with your project idea more broadly? Briefly discuss. (at least 150 words)
 
@@ -122,20 +127,16 @@ Here's an example of how to run an R script inside an RMarkdown file:
 #```
 
 ### Chart 2
-``````{r, echo = FALSE, code = readLines("chart1_example.R")}
-source(second_chart_BMI.R)
+
+``````{r, echo = FALSE, code = readLines("second_chart_BMI.R")}
+my_plot
 ```
 
-Include a chart
-
-Describe why you chose this chart and what information it reveals
+The line chart reveals the relationship between BMI and life expectancy. BMI value recorded within these fifteen years has set up the range between 19.8 to 32.1. It clearly shows that BMI around 22 to 26 has a wider range of life and a slightly higher life span than the extreme BMI number at the very beginning and end of the chart. This indicates that the BMI value can be considered to be a decisive factor on human physical condition. To extend the life expectancy, maintaining in the healthiest range of BMI plays a vital role on the public health system. 
 
 ### Chart 3
 
 Include a chart
-
-``````{r, echo = FALSE, code = readLines("chart3.R")}
-```
 
 Describe why you chose this chart and what information it reveals
 
