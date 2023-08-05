@@ -9,42 +9,57 @@ library(ggplot2)
 library(scales)
 library(maps)
 
-life_expectancy_data_url <- read.csv("/Users/nancyliu/Documents/exploratory-analysis-p02-shivramesh7/Life-Expectancy-Data-Updated.csv")
+life_expectancy_data_url <- read.csv("Life-Expectancy-Data-Updated.csv")
 View(life_expectancy_data_url)
 
 source('second_chart_BMI.R')
+source('first_chart_region.R')
+source('chart3.R')
 
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Project title
 
-Give your project a concise, interesting title that summarizes the entirety of your project
+Life Expectancy Worldwide
 
 ### Authors
 
-
+* Shivani Ramesh (rameshsh@uw.edu)
+* Wilson Boudreaux (wlsnfb@uw.edu)
+* Xingzhu Liu (xliu38@uw.edu)
+* Kendrick Echevarria (echevken@uw.edu)
 
 ### Date
 
-Winter 2022
+**Summer 2023**
 
 ### Abstract
 
-No more than three sentences that summarize your project. Focus on the very most important aspects. For example: (1) "Our main question is .... This question is important because .... To address the question, we will ...." (2) "We are concerned with ..., because .... To address this concern, we plan to ...." (3) "Consider that .... This is important because .... Accordingly, we plan to ...."
+We will be investigating the life expectency between several different countries. We are concerned with this because it affects the global health of the world population. We plan to use this data to investigate what influences life expectancies worldwide.
 
 ### Keywords
 
-3-5 keywords that summarize your project.
-(e.g., "Keywords: human physiology; bicycle exercise; Gen Z; times-series data")
+Life expectancy, immunizations, GDP, economic/demographic information.
 
 ### Introduction  
 
-Briefly introduce your project.  Include 3-5 research questions. What motivates the questions? Why are they important? (at least 200 words)
+* How does alcohol consumption influence life expectancy in different regions?
+* Can BMI impact life expectancy?
+* Is there a correlation between life expectancy and the prevalence of diseases ?
+* How does region correlate with infant/child deaths? \
+\
+These questions were developed due raising concerns about health disparities, need for evidence-based solutions, and preventive healthcare. We want to see how lifestyle choices, diseases, and life expectancy are connected to give policymakers, healthcare folks, and researchers useful insights for improving public health and longevity. Finding the factors that affect life expectancy will help us create better strategies and plans to make a real impact on people's health.
 
 ### Related Work  
 
-Describe your topic and related work in this space. You must include 3 citations to related work (URLs to similar work, high quality articles from the popular press, research papers, etc. ) Please use a standard citation style of your choice. (at least 200 words)
+Our project investigates life expectancy and its correlation with lifestyle variables and diseases, such as infant/child mortality, alcohol consumption, BMI, hepatitis, and measles. Life expectancy is a crucial public health indicator reflecting population well-being. Understanding these relationships can guide targeted interventions to enhance health and longevity. Numerous studies have explored these topics. For example, Rajaratnam et al. (2010) analyzed global child mortality patterns and risk factors, offering insights into reducing infant and child deaths through early interventions. Rehm et al. (2017) examined alcohol consumption's impact on life expectancy, highlighting the need for alcohol-related harm prevention. Di Angelantonio et al. (2016) studied BMI's associations with mortality risks, stressing the importance of obesity prevention and management efforts. Our analysis aims to understand how lifestyle variables and diseases influence life expectancy, offering valuable insights for public health policies and interventions. Identifying modifiable risk factors can improve population health and longevity. Our findings assist policymakers, healthcare practitioners, and researchers in designing evidence-based strategies for better overall well-being.\
+\
+Rajaratnam, J. K., Marcus, J. R., Levin-Rector, A., Chalupka, A. N., Wang, H., Dwyer, L., ... & Murray, C. J. (2010). Worldwide mortality in men and women aged 15-59 years from 1970 to 2010: a systematic analysis. The Lancet, 375(9727), 1704-1720.\
+\
+Rehm, J., Hasan, O. S., Black, S. E., Shield, K. D., Roerecke, M., & Lachenmeier, D. W. (2017). Alcohol use and cause-specific mortality in Russia: a retrospective case–control study of 48 557 adult deaths. The Lancet, 390(10104), 946-958.\
+\
+Di Angelantonio, E., Bhupathiraju, S. N., Wormser, D., Gao, P., Kaptoge, S., Berrington de Gonzalez, A., ... & Nordestgaard, B. G. (2016). Body-mass index and all-cause mortality: individual-participant-data meta-analysis of 239 prospective studies in four continents. The Lancet, 388(10046), 776-786.
 
 ### The Dataset
 
@@ -117,18 +132,17 @@ Describe why you included the table and what information it reveals
 
 ### Chart 1
 
-Include a chart
+```{r, echo=FALSE, code=readLines("first_chart_region.R")}
+death_plot
+```
 
-Describe why you chose this chart and what information it reveals
+I used a bar plot in order to compare each region's infant mortality rate. The reason I used a bar plot is that a bar plot is able to display each region distinctly and it's visually easy to compare the rates between them because of the size of the bars. This information reveals that the highest infant mortality rate is in the region of Africa at 60 deaths per 1000. This information spans from 2000 to 2015. The lowest rate is in the European Union at roughly 5 deaths per 1000.
 
 Here's an example of how to run an R script inside an RMarkdown file:
 
-#``````{r, echo = FALSE, code = readLines("chart1_example.R")}
-#```
-
 ### Chart 2
 
-``````{r, echo = FALSE, code = readLines("second_chart_BMI.R")}
+```{r, echo = FALSE, code = readLines("second_chart_BMI.R")}
 my_plot
 ```
 
@@ -136,7 +150,9 @@ The line chart reveals the relationship between BMI and life expectancy. BMI val
 
 ### Chart 3
 
-Include a chart
+```{r, echo=FALSE, code=readLines("chart3.R")}
+chart_3
+```
 
 Describe why you chose this chart and what information it reveals
 

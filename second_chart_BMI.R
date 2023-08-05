@@ -3,7 +3,7 @@ y_values <- seq(1,3)
 
 library(ggplot2)
 
-life_expectancy_data_url <- read.csv("/Users/nancyliu/Documents/exploratory-analysis-p02-shivramesh7/Life-Expectancy-Data-Updated.csv")
+life_expectancy_data_url <- read.csv("Life-Expectancy-Data-Updated.csv")
 View(life_expectancy_data_url)
 
 my_plot <- ggplot(data = life_expectancy_data_url) +
