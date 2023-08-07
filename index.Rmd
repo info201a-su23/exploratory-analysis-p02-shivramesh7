@@ -125,10 +125,10 @@ Write a summary paragraph of findings that includes the 5 values calculated from
 The summary information reveals key statistics calculated from the dataset: minimum and maximum life expectancy, mean life expectancy by alcohol consumption amount, median, and ***. These values provide an overview of life expectancy distribution, offering insights into patterns and variability, but they should be interpreted with consideration for the dataset's limitations.
 
 ### Table
-
-Include a table of aggregate information
-
-Describe why you included the table and what information it reveals
+```{r, echo=FALSE, code=readLines("aggregate_table.R")}
+aggregate_table
+```
+The table above presents aggregated data on life expectancy, median income (GDP per capita), alcohol consumption, and adult mortality across different regions. Observations suggest that regions with higher median incomes often report higher life expectancies. Moreover, while alcohol consumption varies considerably, its impact on life expectancy is less clear. Regions reporting higher adult mortality rates generally also report lower life expectancies. However, these patterns simply suggest correlations and do not imply causation. For a comprehensive understanding of life expectancy determinants, further investigation is required.
 
 ### Chart 1
 
